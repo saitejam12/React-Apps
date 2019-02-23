@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import "./Button.component";
-import "./Display.component";
+import Buttons from "./Buttons.component";
+import Display from "./Display.component";
 class CalculatorComponent extends Component {
   render() {
     return (
       <div>
         <Display />
-        <Button />
+        <Buttons />
       </div>
     );
   }

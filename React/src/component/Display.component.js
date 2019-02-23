@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
+import "./display.css";
 
 class Display extends Component {
   render() {
     return (
-      <div>
-        <div id="history" />
-        <div id="result" />
+      <div className="display">
+        <div>hi {this.props.value}</div>
       </div>
     );
   }
