@@ -1,0 +1,12 @@
+#main-header {
+    background-color: gainsboro;
+    display: grid;
+    grid-column: auto;
+}
+
+.logo-text>h1 {
+    font-size: 50px;
+    color: orange;
+    font-family: 'Kalam', cursive;
+    text-align: left, justify;
+}

@@ -1,6 +1,6 @@
 export default function operations(numb1, numb2, operator) {
   if (operator === "+") {
-    return numb1 + numb2;
+    return this.state.numb1 + this.state.numb2;
   }
   if (operator === "-") {
     return num1 - numb2;

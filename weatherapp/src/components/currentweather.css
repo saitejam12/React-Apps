@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Kalam|Srisakdi|Acme");
+
+form {
+  margin: 20px 20px;
+  padding: 20px;
+  align-items: center;
+}
+form > input {
+  width: 80%;
+  margin: 22px;
+  border: 1px solid grey;
+  outline: none;
+  display: inline-block;
+  font-family: "Kalam", cursive;
+  height: 25px;
+  font-size: 120%;
+  border-radius: 10px;
+  padding: 12px 20px;
+}
+
+button {
+  width: 10%;
+  background-color: rgb(13, 189, 80);
+  padding: 14px;
+  border: none;
+  font-family: "Kalam", cursive;
+  color: white;
+  font-size: 100%;
+  border-radius: 10px;
+  margin: 20px;
+  outline: none;
+}
+button:active {
+  outline: none;
+  background-color: green;
+}
+
+.weather {
+  font-family: Arial, cursive;
+  font-size: 200%;
+  text-align: center;
+  font-family: "Acme", sans-serif;
+}
+#temperature {
+  font-size: 350%;
+}
+#wind,
+#humidity {
+  font-size: 90%;
+}
+#condition {
+  text-align: center;
+  font-size: 130%;
+  font-stretch: extra-expanded;
+  font-variant-caps: titling-caps;
+  text-transform: capitalize;
+}

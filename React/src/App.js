@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import CalculatorComponent from "./component/Calculator.component";
-// import Calculate from "./logic/Calculate";
+import Calculate from "./logic/Calculate";
 import Buttons from "./Component/Buttons.component";
 import Display from "./component/Display.component";
 
@@ -14,15 +14,19 @@ class App extends Component {
     };
     this.handleclick = this.handleclick.bind(this);
   }
-  handleclick(value) {
+  // handleclick(value) {
+  //   if (!isNaN(value)) {
+  //     this.setState({ total: parseInt(value) + this.state.total });
+  //     console.log(`handle click ${value} - ${this.state.total}`);
+  //   }
+  // }
+  handleClick(value) {
     if (!isNaN(value)) {
-      this.setState({ total: parseInt(value) + this.state.total });
-      console.log(`handle click ${value} - ${this.state.total}`);
+      handleClick => {
+        this.setState(Calculate(this.state, handleClick));
+      };
     }
   }
-  // handleClick = btnClick => {
-  //   this.setState(Calculate(this.state, btnClick));
-  // };
   render() {
     return (
       <div>

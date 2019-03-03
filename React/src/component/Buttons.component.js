@@ -16,66 +16,109 @@ class Buttons extends Component {
   render() {
     return (
       <div className="keys">
-        <button
-          className=" operator cal-btn2 "
-          id="AC"
-          onClick={this.btnClick}
-        />
-        <button
-          className=" operator cal-btn2 "
-          id="+/-"
-          onClick={this.btnClick}
-        />
-        <button
-          className=" operator cal-btn2 "
-          id="%"
-          onClick={this.btnClick}
-        />
-        <button
-          className=" operator cal-btn1 "
-          id="÷"
-          onClick={this.btnClick}
-        />
-        <button
-          className=" number cal-btn2 "
-          id="7"
-          onClick={this.btnClick}
-          value="7"
-        />
-        <button className=" number cal-btn2 " id="8" onClick={this.btnClick} />
-        <button className=" number cal-btn2 " id="9" onClick={this.btnClick} />
-        <button
-          className=" operator cal-btn1 "
-          id="x"
-          onClick={this.btnClick}
-        />
-        <button className=" number cal-btn2 " id="4" onClick={this.btnClick} />
-        <button className=" number cal-btn2 " id="5" onClick={this.btnClick} />
-        <button className=" number cal-btn2 " id="6" onClick={this.btnClick} />
-        <button
-          className=" operator cal-btn1 "
-          id="-"
-          onClick={this.btnClick}
-        />
-        <button className=" number cal-btn2 " id="1" onClick={this.btnClick} />
-        <button className=" number cal-btn2 " id="2" onClick={this.btnClick} />
-        <button className=" number cal-btn2 " id="3" onClick={this.btnClick} />
-        <button
-          className=" operator cal-btn1 "
-          id="+"
-          onClick={this.btnClick}
-        />
-        <button className=" number cal-btn0 " id="0" onClick={this.btnClick} />
-        <button
-          className=" operator cal-btn2 "
-          id="."
-          onClick={this.btnClick}
-        />
-        <button
-          className=" operator cal-btn1 "
-          id="="
-          onClick={this.btnClick}
-        />
+        <div>
+          <button
+            className=" operator cal-btn2 "
+            id="AC"
+            onClick={this.btnClick}
+          >
+            AC
+          </button>
+          <button
+            className=" operator cal-btn2 "
+            id="+/-"
+            onClick={this.btnClick}
+          >
+            +/-
+          </button>
+          <button
+            className=" operator cal-btn2 "
+            id="%"
+            onClick={this.btnClick}
+          >
+            %
+          </button>
+          <button
+            className=" operator cal-btn1 "
+            id="÷"
+            onClick={this.btnClick}
+          >
+            ÷
+          </button>
+        </div>
+        <div>
+          <button className=" number cal-btn2 " id="7" onClick={this.btnClick}>
+            7
+          </button>
+          <button className=" number cal-btn2 " id="8" onClick={this.btnClick}>
+            8
+          </button>
+          <button className=" number cal-btn2 " id="9" onClick={this.btnClick}>
+            9
+          </button>
+          <button
+            className=" operator cal-btn1 "
+            id="x"
+            onClick={this.btnClick}
+          >
+            x
+          </button>
+        </div>
+        <div>
+          <button className=" number cal-btn2 " id="4" onClick={this.btnClick}>
+            4
+          </button>
+          <button className=" number cal-btn2 " id="5" onClick={this.btnClick}>
+            5
+          </button>
+          <button className=" number cal-btn2 " id="6" onClick={this.btnClick}>
+            6
+          </button>
+          <button
+            className=" operator cal-btn1 "
+            id="-"
+            onClick={this.btnClick}
+          >
+            -
+          </button>
+        </div>
+        <div>
+          <button className=" number cal-btn2 " id="1" onClick={this.btnClick}>
+            1
+          </button>
+          <button className=" number cal-btn2 " id="2" onClick={this.btnClick}>
+            2
+          </button>
+          <button className=" number cal-btn2 " id="3" onClick={this.btnClick}>
+            3
+          </button>
+          <button
+            className=" operator cal-btn1 "
+            id="+"
+            onClick={this.btnClick}
+          >
+            +
+          </button>
+        </div>
+        <div>
+          <button className=" number cal-btn0 " id="0" onClick={this.btnClick}>
+            0
+          </button>
+          <button
+            className=" operator cal-btn2 "
+            id="."
+            onClick={this.btnClick}
+          >
+            0
+          </button>
+          <button
+            className=" operator cal-btn1 "
+            id="="
+            onClick={this.btnClick}
+          >
+            =
+          </button>
+        </div>
       </div>
     );
   }
