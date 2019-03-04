@@ -1,0 +1,28 @@
+#row {
+  margin: none;
+}
+.btn {
+  margin: 10px 10px;
+  width: 80px;
+  height: 80px;
+  font-size: 110%;
+  border-style: outset;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+  background-color: whitesmoke;
+}
+.btn:active {
+  background-color: grey;
+  color: white;
+}
+.zero {
+  width: 180px;
+}
+.orange {
+  background-color: orange;
+}
+.orange:active {
+  background-color: white;
+  color: black;
+}

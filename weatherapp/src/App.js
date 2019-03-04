@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 //import SearchBar from "./templates/SearchBar";
-//import CurrentWeather from "./templates/CurrentWeather";
-import Forecast from "./templates/Forecast";
+import CurrentWeather from "./templates/CurrentWeather";
+//import Forecast from "./templates/Forecast";
 import "./App.css";
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="Application">
         <div className="Header">Weather App </div>
-        <Forecast />
+        <CurrentWeather />
       </div>
     );
   }

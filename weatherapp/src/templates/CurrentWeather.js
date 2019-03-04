@@ -12,7 +12,8 @@ class CurrentWeather extends React.Component {
     condition: "",
     wind: "",
     humidity: "",
-    date: ""
+    date: "",
+    visibility: ""
   };
 
   handleClick = event => {
@@ -31,7 +32,8 @@ class CurrentWeather extends React.Component {
           temp: Math.floor(res.data.main.temp),
           condition: res.data.weather[0].description,
           wind: res.data.wind.speed,
-          humidity: res.data.main.humidity
+          humidity: res.data.main.humidity,
+          visibility: res.data.visibility / 1000
         });
       });
   };
@@ -70,6 +72,11 @@ class CurrentWeather extends React.Component {
             <div id="humidity">Humidity:{this.state.humidity}</div>
           ) : (
             <div id="humidity" />
+          )}
+          {this.state.visibility ? (
+            <div id="visibility">Visibility:{this.state.visibility} miles</div>
+          ) : (
+            <div id="visibility" />
           )}
         </div>
       </div>
