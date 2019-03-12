@@ -19,14 +19,7 @@ class Forecast extends React.Component {
   };
 
   render() {
-    return (
-      <div>
-        <form onSubmit={this.handleClick}>
-          <input type="text" placeholder="City Name" id="name" />
-          <button type="submit">Search</button>
-        </form>
-      </div>
-    );
+    return <div />;
   }
 }
 export default Forecast;

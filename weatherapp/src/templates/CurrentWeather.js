@@ -32,6 +32,7 @@ class CurrentWeather extends React.Component {
           temp: Math.floor(res.data.main.temp),
           condition: res.data.weather[0].description,
           wind: res.data.wind.speed,
+          wind_dir: res.data.wind.deg,
           humidity: res.data.main.humidity,
           visibility: res.data.visibility / 1000
         });
@@ -64,7 +65,9 @@ class CurrentWeather extends React.Component {
             <div id="condition" />
           )}
           {this.state.wind ? (
-            <div id="wind">Wind: {this.state.wind} mph</div>
+            <div id="wind">
+              Wind: {this.state.wind} mph {this.state.wind_dir}&deg;
+            </div>
           ) : (
             <div id="wind" />
           )}
