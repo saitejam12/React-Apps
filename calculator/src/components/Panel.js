@@ -1,90 +1,39 @@
 import React from "react";
+import Button from "./Button";
 import "./Panel.css";
-const isOperator = value => {
-  return (!isNaN(value) && value !== null) || value === "." || value === "=";
-};
-
-const TTon = props => (
-  <div
-    className={`button-wrapper ${
-      isOperator(props.children) ? null : "operator"
-    }`}
-    onClick={() => props.handleBtnClick(props.children)}
-  >
-    {props.children}
-  </div>
-);
 
 const Panel = props => {
   return (
-    <div className="panel-wrapper">
+    <div className="button-panel">
       <div className="row">
-        <TTon handleBtnClick={props.clearInput} name="C">
-          {" "}
-          C{" "}
-        </TTon>
+        <Button handleClick={props.handleInput}>C</Button>
       </div>
       <div className="row">
-        <TTon handleBtnClick={props.addToDisplay} name="7">
-          7
-        </TTon>
-        <TTon handleBtnClick={props.addToDisplay} name="8">
-          8
-        </TTon>
-        <TTon handleBtnClick={props.addToDisplay} name="9">
-          9
-        </TTon>
-        <TTon handleBtnClick={props.division} name="/">
-          {" "}
-          &divide;{" "}
-        </TTon>
+        <Button handleClick={props.handleInput}>7</Button>
+        <Button handleClick={props.handleInput}>8</Button>
+        <Button handleClick={props.handleInput}>9</Button>
+        <Button handleClick={props.handleInput}> &divide; </Button>
       </div>
       <div className="row">
-        <TTon handleBtnClick={props.addToDisplay} name="4">
-          4
-        </TTon>
-        <TTon handleBtnClick={props.addToDisplay} name="5">
-          5
-        </TTon>
-        <TTon handleBtnClick={props.addToDisplay} name="6">
-          6
-        </TTon>
-        <TTon handleBtnClick={props.multiplication} name="*">
-          {" "}
-          &times;{" "}
-        </TTon>
+        <Button handleClick={props.handleInput}>4</Button>
+        <Button handleClick={props.handleInput}>5</Button>
+        <Button handleClick={props.handleInput}>6</Button>
+        <Button handleClick={props.handleInput}> &times; </Button>
       </div>
       <div className="row">
-        <TTon handleBtnClick={props.addToDisplay} name="1">
-          1
-        </TTon>
-        <TTon handleBtnClick={props.addToDisplay} name="2">
-          2
-        </TTon>
-        <TTon handleBtnClick={props.addToDisplay} name="3">
-          3
-        </TTon>
-        <TTon handleBtnClick={props.subtraction} name="-">
-          {" "}
-          &minus;{" "}
-        </TTon>
+        <Button handleClick={props.handleInput}>1</Button>
+        <Button handleClick={props.handleInput}>2</Button>
+        <Button handleClick={props.handleInput}>3</Button>
+        <Button handleClick={props.handleInput}> &minus; </Button>
       </div>
       <div className="row">
-        <TTon handleBtnClick={props.addToDisplay} name="0">
-          0
-        </TTon>
-        <TTon handleBtnClick={props.decimal} name=".">
-          .
-        </TTon>
-        <TTon handleBtnClick={props.getResults} name="=">
-          =
-        </TTon>
-        <TTon handleBtnClick={props.addition} name="+">
-          {" "}
-          +{" "}
-        </TTon>
+        <Button handleClick={props.handleInput}>0</Button>
+        <Button handleClick={props.handleInput}>.</Button>
+        <Button handleClick={props.handleInput}>=</Button>
+        <Button handleClick={props.handleInput}>+</Button>
       </div>
     </div>
   );
 };
+
 export default Panel;

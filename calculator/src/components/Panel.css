@@ -10,8 +10,13 @@
   font-size: 120%;
   background-color: #e0e1e6;
 }
+.button-panel {
+  display: flex;
+  flex-direction: column;
+}
 .row {
   display: flex;
+  flex: 1;
 }
 .operator {
   background-color: #ffbe00;
