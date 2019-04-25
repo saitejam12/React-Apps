@@ -1,4 +1,6 @@
 import React from "react";
+import SelectSymbol from "./SelectSymbol";
+import Result from "./Result";
 import "./P2P.css";
 //-------------------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------------------
@@ -23,7 +25,7 @@ class Board extends React.Component {
         this.props.board[a] === this.props.board[c]
       ) {
         this.props.gameHandle("win");
-      } else if (!this.props.board.includes(null)) {
+      } else {
         this.props.gameHandle("tie");
       }
     }
@@ -61,58 +63,6 @@ class Board extends React.Component {
 //-------------------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------------------
 //-------------------------------------------------------------------------------------------------------------------------------------------
-
-class SelectSymbol extends React.Component {
-  handleSymbol = side => {
-    console.log(side);
-    this.props.symbolHandle(side);
-  };
-
-  render() {
-    return (
-      <div className="Select" style={{ display: `${this.props.display}` }}>
-        <p>Select Player Symbol</p>
-        <div className="symbol">
-          <div className="box" onClick={() => this.handleSymbol("X")}>
-            X
-          </div>
-          <div className="box" onClick={() => this.handleSymbol("O")}>
-            O
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
-//-------------------------------------------------------------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------------------------------------------------------------
-class Result extends React.Component {
-  render() {
-    return (
-      <div className="result" style={{ display: `${this.props.display}` }}>
-        {this.props.gameStatus === "win" ? (
-          <h3>YAY!! Winnner. Wanna Play again?</h3>
-        ) : this.props.gameStatus === "tie" ? (
-          <h3>You Tied.</h3>
-        ) : (
-          <h3>You Lost. Try Again?</h3>
-        )}
-        <button
-          onClick={() => {
-            this.props.reset();
-          }}
-        >
-          Play Again
-        </button>
-      </div>
-    );
-  }
-}
-
-//-------------------------------------------------------------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------------------------------------------------------------
 class P2P extends React.Component {
   state = {
     board: Array(9).fill(null),
@@ -140,7 +90,8 @@ class P2P extends React.Component {
   gameHandle = gameState => {
     this.setState({
       gameCompleteState: gameState,
-      displayResult: ""
+      displayResult: "",
+      player: this.state.player === "X" ? "O" : "X"
     });
   };
   resetGame = () => {
