@@ -10,7 +10,6 @@ class App extends Component {
       <div className="Application">
         <div className="Header">Weather App </div>
         <CurrentWeather />
-        <button>Forecast</button>
       </div>
     );
   }
