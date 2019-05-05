@@ -1,7 +1,19 @@
 import React from "react";
-import "./style/display.css";
-export default class Display extends React.Component {
-  render() {
-    return <div id="result">{this.props.value}</div>;
-  }
+
+const displaySty = {
+  height: "2.5em",
+  backgroundColor: "white",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-end",
+  fontSize: "200%",
+  fontWeight: "bold",
+  padding: "10px"
+};
+export default function Display(props) {
+  return (
+    <div className="display" style={displaySty}>
+      {props.display}
+    </div>
+  );
 }
